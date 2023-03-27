@@ -112,6 +112,4 @@ function App() {
 }
 
 // Important: Need to have ID key else LD will have no idea where to look for flags
-export default withLDProvider({
-  clientSideID: "640e707dcc661113a25cce60",
-})(App);
+export default withLDConsumer()(App);

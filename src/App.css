@@ -43,7 +43,7 @@
 
 .container {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   grid-gap: 5px;
   filter: drop-shadow(0 0.05em 0.05em #00000053);
   font-weight: bold;
@@ -62,5 +62,4 @@
   padding: 10px;
   border-radius: 5px;
   overflow: hidden;
-  font-size: 1.5em;
 }

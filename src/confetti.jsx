@@ -1,21 +1,31 @@
-import { withLDConsumer } from "launchdarkly-react-client-sdk";
-import Confetti from "react-confetti";
+import ConfettiExplosion from "react-confetti-explosion";
 
-const confettiFX = ({ flags }) => {
-  const [height, setHeight] = useState(null);
-  const [width, setWidth] = useState(null);
-  const confettiRef = useRef(null);
-
-  useEffect(() => {
-    setHeight(confettiRef.current.clientHeight);
-    setWidth(confettiRef.current.clientWidth);
-  }, []);
-
+export default function () {
   return (
-    <div className="confettie-wrap" ref={confettiRef}>
-      <Confetti numberOfPieces={150} width={width} height={height} />
-    </div>
+    <>
+      <ConfettiExplosion
+        duration="2500"
+        particleCount="500"
+        colors={[
+          "#F08080",
+          "#FA8072",
+          "#CCF1FF",
+          "#E0D7FF",
+          "#FAFFC7",
+          "#FEC8D8",
+          "#EFF9DE",
+          "#DBF1E6",
+          "#FFFFFF",
+          "#9AE49E",
+          "#76CBF0",
+          "#FFCADD",
+          "#FFFF00",
+          "#0000FF",
+          "#FF00FF",
+          "#00FF00",
+          "#FF0000",
+        ]}
+      />
+    </>
   );
-};
-
-export default withLDConsumer()(confettiFX);
+}
